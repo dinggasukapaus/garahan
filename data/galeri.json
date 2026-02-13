@@ -2,16 +2,19 @@
   "items": [
     {
       "emoji": "🌾",
+      "bg": "/media/wallhaven-p83rxe.jpg",
       "label": "Gotong Royong Bersama Warga Desa",
       "desc": "Warga bahu-membahu membersihkan lingkungan"
     },
     {
       "emoji": "💉",
+      "bg": "/media/wallhaven-p83rxe.jpg",
       "label": "Kegiatan Posyandu Balita",
       "desc": "Pemeriksaan kesehatan rutin bulanan"
     },
     {
       "emoji": "🏆",
+      "bg": "/media/wallhaven-p83rxe.jpg",
       "label": "Peringatan HUT Kemerdekaan RI",
       "desc": "Semarak perayaan 17 Agustus di lapangan desa"
     },
