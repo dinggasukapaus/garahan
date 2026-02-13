@@ -1480,25 +1480,47 @@
     );
   }
 
+  const MEDIA_ROOT = "https://dinggasukapaus.github.io/garahan/media/";
+const BASE_ROOT  = "https://dinggasukapaus.github.io/garahan/";
+
+function resolveImagePath(bg) {
+  if (!bg) return bg;
+
+  const val = String(bg).trim();
+
+  if (/^https?:\/\//i.test(val)) return val;
+
+  if (/^\/?media\//i.test(val)) {
+    return BASE_ROOT + val.replace(/^\//, "");
+  }
+
+  return MEDIA_ROOT + val;
+}
+
+
   function buildBgWrapperAndContent(bg, emoji, title) {
-    const hasImage = isImageSource(bg);
-    if (hasImage) {
-      const src = bg;
-      const style = 'background:#000;';
-      const inner = `<img src="${src}" alt="${title || ''}" style="width:100%;height:100%;object-fit:cover;">`;
-      return { style, inner };
-    }
-    if (bg) {
-      return {
-        style: `background:${bg};`,
-        inner: emoji || ''
-      };
-    }
+  const hasImage = isImageSource(bg);
+
+  if (hasImage) {
+    const src = resolveImagePath(bg);
+    const style = 'background:#000;';
+    const inner = `<img src="${src}" alt="${title || ''}" style="width:100%;height:100%;object-fit:cover;">`;
+    return { style, inner };
+  }
+
+  if (bg) {
     return {
-      style: '',
+      style: `background:${bg};`,
       inner: emoji || ''
     };
   }
+
+  return {
+    style: '',
+    inner: emoji || ''
+  };
+}
+
 
   function renderBody(raw) {
     if (!raw) return '';
@@ -1569,7 +1591,7 @@
     const photo = document.getElementById('lightboxPhoto');
     if (isImageSource(d.bg)) {
       photo.style.background = '#000';
-      photo.innerHTML = `<img src="${d.bg}" alt="${d.label || ''}" style="width:100%;height:100%;object-fit:contain;">`;
+      photo.innerHTML = `<img src="${resolveImagePath(d.bg)}" alt="${d.label || ''}" style="width:100%;height:100%;object-fit:contain;">`;
     } else {
       photo.style.background = d.bg;
       photo.textContent = d.emoji;
@@ -1587,7 +1609,7 @@
       if (isImageSource(d.bg)) {
         return `
           <div class="lb-thumb ${active}" onclick="lightboxGoto(${i})">
-            <img src="${d.bg}" alt="${d.label || ''}" style="width:100%;height:100%;object-fit:cover;">
+            <img src="${resolveImagePath(d.bg)}" alt="${d.label || ''}" style="width:100%;height:100%;object-fit:cover;">
           </div>
         `;
       }
@@ -1794,7 +1816,7 @@
       .map((d, idx) => {
         const hasImg = isImageSource(d.bg);
         const inner = hasImg
-          ? `<img src="${d.bg}" alt="${d.label || ''}" style="width:100%;height:100%;object-fit:cover;">`
+          ? `<img src="${resolveImagePath(d.bg)}" alt="${d.label || ''}" style="width:100%;height:100%;object-fit:cover;">`
           : (d.emoji || '');
         const bgStyle = hasImg ? '' : `background:${d.bg};`;
         return `
@@ -1815,7 +1837,7 @@
       .map((d, idx) => {
         const hasImg = isImageSource(d.bg);
         const inner = hasImg
-          ? `<img src="${d.bg}" alt="${d.title || ''}" style="width:100%;height:100%;object-fit:cover;">`
+          ? `<img src="${resolveImagePath(d.bg)}" alt="${d.title || ''}" style="width:100%;height:100%;object-fit:cover;">`
           : (d.emoji || '');
         const bgStyle = hasImg ? '' : `background:${d.bg};`;
         return `
