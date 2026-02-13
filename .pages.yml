@@ -29,9 +29,9 @@ content:
             label: Emoji
             type: string
           - name: bg
-            label: Background (CSS)
-            type: string
-            description: Nilai background CSS, misalnya 'linear-gradient(...)'
+            label: Gambar / Background
+            type: image
+            description: Upload gambar background berita (bisa foto). Jika dibiarkan kosong, akan memakai warna/gradient default.
           - name: date
             label: Tanggal
             type: string
@@ -74,8 +74,8 @@ content:
             label: Emoji
             type: string
           - name: bg
-            label: Background (CSS)
-            type: string
+            label: Gambar / Background
+            type: image
           - name: label
             label: Judul Foto
             type: string
@@ -104,8 +104,8 @@ content:
             label: Emoji
             type: string
           - name: bg
-            label: Background (CSS)
-            type: string
+            label: Gambar / Background
+            type: image
           - name: title
             label: Judul
             type: string
@@ -147,6 +147,31 @@ content:
             label: Tag
             type: string
             list: true
+
+  - name: settings
+    label: Pengaturan Situs
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: villageName
+        label: Nama Desa
+        type: string
+      - name: subdistrict
+        label: Kecamatan
+        type: string
+      - name: regency
+        label: Kabupaten/Kota
+        type: string
+      - name: villageHeadName
+        label: Nama Kepala Desa
+        type: string
+      - name: villageHeadTitle
+        label: Jabatan Kepala Desa
+        type: string
+      - name: villageHeadPeriod
+        label: Periode Jabatan Kepala Desa
+        type: string
 
 settings:
   content:
