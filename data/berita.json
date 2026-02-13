@@ -3,7 +3,6 @@
     {
       "cat": "Berita Desa",
       "emoji": "🌱",
-      "bg": "linear-gradient(135deg, #2d5a1b, #4a8c30)",
       "date": "10 Februari 2025",
       "author": "Admin Desa",
       "readtime": "3 menit baca",
@@ -20,7 +19,6 @@
     {
       "cat": "Pengumuman",
       "emoji": "📢",
-      "bg": "linear-gradient(135deg, #1e3a6e, #3d7abf)",
       "date": "5 Februari 2025",
       "author": "Bidan Desa",
       "readtime": "2 menit baca",
@@ -38,7 +36,6 @@
     {
       "cat": "Agenda",
       "emoji": "📅",
-      "bg": "linear-gradient(135deg, #6e2d1a, #b54a2d)",
       "date": "1 Februari 2025",
       "author": "Sekretariat Desa",
       "readtime": "2 menit baca",
