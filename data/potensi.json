@@ -3,60 +3,148 @@
     {
       "cat": "Pertanian",
       "emoji": "🌾",
-      "bg": "linear-gradient(135deg, #1a5c38, #4caf78)",
       "title": "Lahan Sawah & Perkebunan",
       "stats": [
-        { "num": "180 Ha", "lbl": "Luas Sawah" },
-        { "num": "420+", "lbl": "Petani Aktif" },
-        { "num": "6 Ton", "lbl": "Produksi/Ha" }
+        {
+          "num": "180 Ha",
+          "lbl": "Luas Sawah"
+        },
+        {
+          "num": "420+",
+          "lbl": "Petani Aktif"
+        },
+        {
+          "num": "6 Ton",
+          "lbl": "Produksi/Ha"
+        }
       ],
-      "desc": "<p>Sektor pertanian merupakan tulang punggung perekonomian Desa Sukamaju. Dengan lahan persawahan seluas 180 hektar dan lahan perkebunan seluas 65 hektar, desa ini menjadi salah satu penyangga pangan Kecamatan Cibaduyut.</p><h4>Komoditas Unggulan</h4><p>Padi varietas Ciherang dan IR-64 menjadi komoditas utama dengan masa panen 2 kali per tahun. Selain padi, petani Sukamaju juga mengembangkan jagung manis, singkong, dan berbagai jenis sayuran dataran rendah seperti kangkung, bayam, dan kacang panjang.</p><h4>Program Pengembangan</h4><p>Pemerintah desa bersama Dinas Pertanian Kabupaten tengah mengembangkan sistem irigasi modern dan program pertanian organik untuk meningkatkan nilai jual produk lokal. Kelompok Tani \"Mekar Jaya\" saat ini aktif membimbing petani muda desa.</p>",
+      "desc": "Sektor pertanian merupakan tulang punggung perekonomian Desa Sukamaju. Dengan lahan persawahan seluas 180 hektar dan lahan perkebunan seluas 65 hektar, desa ini menjadi salah satu penyangga pangan Kecamatan Cibaduyut.\n\n#### Komoditas Unggulan\n\nPadi varietas Ciherang dan IR-64 menjadi komoditas utama dengan masa panen 2 kali per tahun. Selain padi, petani Sukamaju juga mengembangkan jagung manis, singkong, dan berbagai jenis sayuran dataran rendah seperti kangkung, bayam, dan kacang panjang.\n\n#### Program Pengembangan\n\nPemerintah desa bersama Dinas Pertanian Kabupaten tengah mengembangkan sistem irigasi modern dan program pertanian organik untuk meningkatkan nilai jual produk lokal. Kelompok Tani \"Mekar Jaya\" saat ini aktif membimbing petani muda desa.",
       "produk": [
-        { "icon": "🌾", "name": "Padi Organik", "desc": "Varietas Ciherang, 2x panen/tahun" },
-        { "icon": "🌽", "name": "Jagung Manis", "desc": "Dipasarkan ke pasar kabupaten" },
-        { "icon": "🥬", "name": "Sayuran Segar", "desc": "Kangkung, bayam, kacang panjang" },
-        { "icon": "🍠", "name": "Singkong", "desc": "Bahan baku keripik UMKM lokal" }
+        {
+          "icon": "🌾",
+          "name": "Padi Organik",
+          "desc": "Varietas Ciherang, 2x panen/tahun"
+        },
+        {
+          "icon": "🌽",
+          "name": "Jagung Manis",
+          "desc": "Dipasarkan ke pasar kabupaten"
+        },
+        {
+          "icon": "🥬",
+          "name": "Sayuran Segar",
+          "desc": "Kangkung, bayam, kacang panjang"
+        },
+        {
+          "icon": "🍠",
+          "name": "Singkong",
+          "desc": "Bahan baku keripik UMKM lokal"
+        }
       ],
-      "tags": ["Pertanian", "Padi", "Organik", "Ketahanan Pangan"]
+      "tags": [
+        "Pertanian",
+        "Padi",
+        "Organik",
+        "Ketahanan Pangan"
+      ]
     },
     {
       "cat": "UMKM",
       "emoji": "🛍️",
-      "bg": "linear-gradient(135deg, #5c3d1a, #af884c)",
       "title": "Produk UMKM Lokal Sukamaju",
       "stats": [
-        { "num": "47", "lbl": "Pelaku UMKM" },
-        { "num": "Rp 2,1M", "lbl": "Omset/Tahun" },
-        { "num": "120+", "lbl": "Tenaga Kerja" }
+        {
+          "num": "47",
+          "lbl": "Pelaku UMKM"
+        },
+        {
+          "num": "Rp 2,1M",
+          "lbl": "Omset/Tahun"
+        },
+        {
+          "num": "120+",
+          "lbl": "Tenaga Kerja"
+        }
       ],
-      "desc": "<p>UMKM Desa Sukamaju berkembang pesat dalam beberapa tahun terakhir, didorong oleh program pemberdayaan dari BUMDes dan pelatihan wirausaha yang diselenggarakan pemerintah desa. Total ada 47 pelaku UMKM aktif dengan berbagai bidang usaha.</p><h4>Produk Andalan</h4><p>Keripik singkong Sukamaju telah menjadi produk unggulan yang dipasarkan hingga ke luar kabupaten. Batik tulis motif \"Citarum Mekar\" kini mulai dikenal di kalangan pecinta batik lokal Jawa Barat. Selain itu, berbagai kerajinan anyaman bambu juga menjadi daya tarik tersendiri.</p><h4>Dukungan Pemerintah Desa</h4><p>BUMDes Sukamaju Mandiri berperan aktif sebagai agregator pemasaran produk UMKM, termasuk membuka gerai online di platform e-commerce. Program KUR Desa juga tersedia bagi pelaku UMKM yang membutuhkan modal usaha dengan bunga rendah.</p>",
+      "desc": "UMKM Desa Sukamaju berkembang pesat dalam beberapa tahun terakhir, didorong oleh program pemberdayaan dari BUMDes dan pelatihan wirausaha yang diselenggarakan pemerintah desa. Total ada 47 pelaku UMKM aktif dengan berbagai bidang usaha.\n\n#### Produk Andalan\n\nKeripik singkong Sukamaju telah menjadi produk unggulan yang dipasarkan hingga ke luar kabupaten. Batik tulis motif \"Citarum Mekar\" kini mulai dikenal di kalangan pecinta batik lokal Jawa Barat. Selain itu, berbagai kerajinan anyaman bambu juga menjadi daya tarik tersendiri.\n\n#### Dukungan Pemerintah Desa\n\nBUMDes Sukamaju Mandiri berperan aktif sebagai agregator pemasaran produk UMKM, termasuk membuka gerai online di platform e-commerce. Program KUR Desa juga tersedia bagi pelaku UMKM yang membutuhkan modal usaha dengan bunga rendah.",
       "produk": [
-        { "icon": "🥔", "name": "Keripik Singkong", "desc": "Aneka rasa, kemasan modern" },
-        { "icon": "🎨", "name": "Batik Citarum", "desc": "Motif khas Sukamaju" },
-        { "icon": "🧺", "name": "Anyaman Bambu", "desc": "Kerajinan tangan tradisional" },
-        { "icon": "🍯", "name": "Madu Hutan", "desc": "Produksi petani lebah lokal" }
+        {
+          "icon": "🥔",
+          "name": "Keripik Singkong",
+          "desc": "Aneka rasa, kemasan modern"
+        },
+        {
+          "icon": "🎨",
+          "name": "Batik Citarum",
+          "desc": "Motif khas Sukamaju"
+        },
+        {
+          "icon": "🧺",
+          "name": "Anyaman Bambu",
+          "desc": "Kerajinan tangan tradisional"
+        },
+        {
+          "icon": "🍯",
+          "name": "Madu Hutan",
+          "desc": "Produksi petani lebah lokal"
+        }
       ],
-      "tags": ["UMKM", "Keripik", "Batik", "Kerajinan", "BUMDes"]
+      "tags": [
+        "UMKM",
+        "Keripik",
+        "Batik",
+        "Kerajinan",
+        "BUMDes"
+      ]
     },
     {
       "cat": "Wisata",
       "emoji": "🌊",
-      "bg": "linear-gradient(135deg, #1a3a5c, #4c78af)",
       "title": "Wisata Alam Desa Sukamaju",
       "stats": [
-        { "num": "3", "lbl": "Objek Wisata" },
-        { "num": "800+", "lbl": "Wisatawan/Bln" },
-        { "num": "Rp 45Jt", "lbl": "PADes/Tahun" }
+        {
+          "num": "3",
+          "lbl": "Objek Wisata"
+        },
+        {
+          "num": "800+",
+          "lbl": "Wisatawan/Bln"
+        },
+        {
+          "num": "Rp 45Jt",
+          "lbl": "PADes/Tahun"
+        }
       ],
-      "desc": "<p>Desa Sukamaju dianugerahi kekayaan alam yang indah, menjadikannya destinasi wisata alam yang potensial di Kabupaten Bandung. Dengan pemandangan sawah yang terhampar luas, aliran sungai jernih, dan air terjun tersembunyi, desa ini menawarkan pengalaman wisata yang menyegarkan.</p><h4>Objek Wisata Unggulan</h4><p><strong>Curug Sukamaju</strong> – Air terjun setinggi 12 meter yang dikelilingi pepohonan hijau. Dapat dicapai dengan berjalan kaki 20 menit dari pusat desa. Tiket masuk Rp 5.000/orang.</p><p><strong>Agrowisata Sawah Telaga</strong> – Hamparan sawah berterasering dengan pemandangan spektakuler terutama saat musim tanam dan panen. Tersedia jembatan bambu untuk foto dan tracking sawah.</p><p><strong>Sungai Sukamaju</strong> – Area tubing dan berenang di sungai berair jernih dengan bebatuan alami. Cocok untuk keluarga dan komunitas pecinta alam.</p>",
+      "desc": "Desa Sukamaju dianugerahi kekayaan alam yang indah, menjadikannya destinasi wisata alam yang potensial di Kabupaten Bandung. Dengan pemandangan sawah yang terhampar luas, aliran sungai jernih, dan air terjun tersembunyi, desa ini menawarkan pengalaman wisata yang menyegarkan.\n\n#### Objek Wisata Unggulan\n\n**Curug Sukamaju** – Air terjun setinggi 12 meter yang dikelilingi pepohonan hijau. Dapat dicapai dengan berjalan kaki 20 menit dari pusat desa. Tiket masuk Rp 5.000/orang.\n\n**Agrowisata Sawah Telaga** – Hamparan sawah berterasering dengan pemandangan spektakuler terutama saat musim tanam dan panen. Tersedia jembatan bambu untuk foto dan tracking sawah.\n\n**Sungai Sukamaju** – Area tubing dan berenang di sungai berair jernih dengan bebatuan alami. Cocok untuk keluarga dan komunitas pecinta alam.",
       "produk": [
-        { "icon": "💧", "name": "Curug Sukamaju", "desc": "Air terjun 12m, tiket Rp 5.000" },
-        { "icon": "🌾", "name": "Agrowisata Sawah", "desc": "Terasering, tracking, foto" },
-        { "icon": "🏄", "name": "Tubing Sungai", "desc": "Arus sedang, aman untuk keluarga" },
-        { "icon": "⛺", "name": "Camping Ground", "desc": "Area berkemah pinggir sungai" }
+        {
+          "icon": "💧",
+          "name": "Curug Sukamaju",
+          "desc": "Air terjun 12m, tiket Rp 5.000"
+        },
+        {
+          "icon": "🌾",
+          "name": "Agrowisata Sawah",
+          "desc": "Terasering, tracking, foto"
+        },
+        {
+          "icon": "🏄",
+          "name": "Tubing Sungai",
+          "desc": "Arus sedang, aman untuk keluarga"
+        },
+        {
+          "icon": "⛺",
+          "name": "Camping Ground",
+          "desc": "Area berkemah pinggir sungai"
+        }
       ],
-      "tags": ["Wisata Alam", "Curug", "Agrowisata", "Ekowisata", "Sungai"]
+      "tags": [
+        "Wisata Alam",
+        "Curug",
+        "Agrowisata",
+        "Ekowisata",
+        "Sungai"
+      ]
     }
   ]
 }
-
