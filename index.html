@@ -893,8 +893,8 @@
   <a href="#beranda" class="nav-brand">
     <div class="nav-logo">S</div>
     <div class="nav-title">
-      Desa Sukamaju
-      <span>Kec. Cibaduyut · Kab. Bandung</span>
+      <span id="villageNameBrand">Desa Sukamaju</span>
+      <span id="villageLocationBrand">Kec. Cibaduyut · Kab. Bandung</span>
     </div>
   </a>
   <ul class="nav-links">
@@ -918,7 +918,7 @@
     <div class="mobile-nav-header">
       <div class="mobile-nav-brand">
         <div class="logo-circle">S</div>
-        <span>Desa Sukamaju</span>
+        <span id="villageNameMobile">Desa Sukamaju</span>
       </div>
       <button class="mobile-close" onclick="closeMobileNav()">✕</button>
     </div>
@@ -952,7 +952,7 @@
       <div class="hero-badge">🌿 Website Resmi Desa</div>
       <h1>
         Selamat Datang di
-        <span class="accent">Desa Sukamaju</span>
+        <span class="accent" id="heroVillageName">Desa Sukamaju</span>
       </h1>
       <p>Desa Sukamaju adalah desa yang berada di Kecamatan Cibaduyut, Kabupaten Bandung. Website ini menjadi pusat informasi, publikasi kegiatan, serta layanan administrasi desa secara online.</p>
       <div class="hero-buttons">
@@ -1012,10 +1012,12 @@
   <div class="sambutan-inner animate">
     <div class="sambutan-kades">
       <div class="kades-foto">👨‍💼</div>
-      <div class="kades-name">H. Ahmad Sudirman</div>
-      <div class="kades-jabatan">Kepala Desa Sukamaju</div>
+      <div class="kades-name" id="villageHeadNameText">H. Ahmad Sudirman</div>
+      <div class="kades-jabatan" id="villageHeadTitleText">Kepala Desa Sukamaju</div>
       <div style="margin-top:20px; height:2px; background:rgba(255,255,255,0.2);"></div>
-      <div style="margin-top:20px; font-size:13px; color:rgba(255,255,255,0.7); line-height:1.8;">Masa Jabatan 2022 – 2028<br>📞 0812-xxxx-xxxx</div>
+      <div style="margin-top:20px; font-size:13px; color:rgba(255,255,255,0.7); line-height:1.8;">
+        <span id="villageHeadPeriodText">Masa Jabatan 2022 – 2028</span><br>📞 0812-xxxx-xxxx
+      </div>
     </div>
     <div class="sambutan-text">
       <span class="section-tag">Sambutan</span>
@@ -1042,7 +1044,7 @@
     </div>
     <div>
       <span class="section-tag">Profil Desa</span>
-      <h2 class="section-title">Sejarah & Identitas Desa Sukamaju</h2>
+      <h2 class="section-title" id="profilSectionTitle">Sejarah & Identitas Desa Sukamaju</h2>
       <p class="section-desc" style="margin-bottom:28px;">Desa Sukamaju berdiri sejak tahun 1985. Awalnya merupakan bagian dari wilayah perladangan tradisional, kemudian berkembang menjadi desa yang maju dalam bidang pertanian dan UMKM lokal.</p>
       <div class="visi-misi">
         <div class="vm-card">
@@ -1067,7 +1069,7 @@
 <section id="data" class="data-desa">
   <div class="section-header animate" style="text-align:center;">
     <span class="section-tag">Statistik</span>
-    <h2 class="section-title">Data Desa Sukamaju</h2>
+    <h2 class="section-title" id="dataSectionTitle">Data Desa Sukamaju</h2>
     <p class="section-desc" style="margin:0 auto;">Data statistik Desa Sukamaju yang diperbarui secara berkala setiap semester.</p>
   </div>
   <div class="data-grid animate">
@@ -1363,7 +1365,7 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="logo">Desa <span>Sukamaju</span></div>
+      <div class="logo">Desa <span id="footerVillageName">Sukamaju</span></div>
       <p>Website resmi Desa Sukamaju, Kecamatan Cibaduyut, Kabupaten Bandung. Melayani dengan sepenuh hati untuk kemajuan bersama.</p>
       <div style="margin-top:20px;display:flex;gap:12px;">
         <a href="#" style="width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:16px;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">📘</a>
@@ -1466,6 +1468,85 @@
   });
 
   /* ────────────────────────────────────────────
+     UTILITIES
+  ──────────────────────────────────────────── */
+  function isImageSource(bg) {
+    if (!bg) return false;
+    const val = String(bg).trim();
+    return (
+      /^https?:\/\//i.test(val) ||
+      /^\/?media\//i.test(val) ||
+      /\.(jpe?g|png|gif|webp|svg)$/i.test(val)
+    );
+  }
+
+  function buildBgWrapperAndContent(bg, emoji, title) {
+    const hasImage = isImageSource(bg);
+    if (hasImage) {
+      const src = bg;
+      const style = 'background:#000;';
+      const inner = `<img src="${src}" alt="${title || ''}" style="width:100%;height:100%;object-fit:cover;">`;
+      return { style, inner };
+    }
+    if (bg) {
+      return {
+        style: `background:${bg};`,
+        inner: emoji || ''
+      };
+    }
+    return {
+      style: '',
+      inner: emoji || ''
+    };
+  }
+
+  function renderBody(raw) {
+    if (!raw) return '';
+    let html = String(raw);
+    // Konversi sintaks markdown gambar ![alt](src) menjadi elemen <img>
+    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (m, alt, src) => {
+      const safeAlt = (alt || '').replace(/"/g, '&quot;');
+      const safeSrc = (src || '').replace(/"/g, '&quot;');
+      return `<img src="${safeSrc}" alt="${safeAlt}" style="max-width:100%;border-radius:16px;margin:16px 0;">`;
+    });
+    return html;
+  }
+
+  function setTextContent(id, value) {
+    const el = document.getElementById(id);
+    if (el && value != null) {
+      el.textContent = value;
+    }
+  }
+
+  let siteConfig = null;
+
+  function applySiteSettings() {
+    if (!siteConfig) return;
+    const vName = siteConfig.villageName || 'Desa Sukamaju';
+    const subdistrict = siteConfig.subdistrict || 'Cibaduyut';
+    const regency = siteConfig.regency || 'Bandung';
+
+    setTextContent('villageNameBrand', vName);
+    setTextContent('villageLocationBrand', `Kec. ${subdistrict} · Kab. ${regency}`);
+    setTextContent('villageNameMobile', vName);
+    setTextContent('heroVillageName', vName);
+    setTextContent('dataSectionTitle', `Data ${vName}`);
+    setTextContent('profilSectionTitle', `Sejarah & Identitas ${vName}`);
+
+    const shortName = vName.replace(/^Desa\s+/i, '');
+    setTextContent('footerVillageName', shortName);
+
+    const vhName = siteConfig.villageHeadName || 'H. Ahmad Sudirman';
+    const vhTitle = siteConfig.villageHeadTitle || `Kepala ${vName}`;
+    const vhPeriod = siteConfig.villageHeadPeriod || 'Masa Jabatan 2022 – 2028';
+
+    setTextContent('villageHeadNameText', vhName);
+    setTextContent('villageHeadTitleText', vhTitle);
+    setTextContent('villageHeadPeriodText', vhPeriod);
+  }
+
+  /* ────────────────────────────────────────────
      LIGHTBOX
   ──────────────────────────────────────────── */
   let galeriData = [];
@@ -1486,8 +1567,13 @@
   function renderLightbox() {
     const d = galeriData[lbIndex];
     const photo = document.getElementById('lightboxPhoto');
-    photo.style.background = d.bg;
-    photo.textContent = d.emoji;
+    if (isImageSource(d.bg)) {
+      photo.style.background = '#000';
+      photo.innerHTML = `<img src="${d.bg}" alt="${d.label || ''}" style="width:100%;height:100%;object-fit:contain;">`;
+    } else {
+      photo.style.background = d.bg;
+      photo.textContent = d.emoji;
+    }
     document.getElementById('lbCaption').textContent = d.label;
     document.getElementById('lbCounter').textContent = `${lbIndex + 1} / ${galeriData.length}`;
     document.querySelectorAll('.lb-thumb').forEach((t, i) => {
@@ -1496,10 +1582,21 @@
   }
   function buildThumbs() {
     const container = document.getElementById('lbThumbs');
-    container.innerHTML = galeriData.map((d, i) => `
-      <div class="lb-thumb ${i === lbIndex ? 'active' : ''}"
-           style="background:${d.bg};" onclick="lightboxGoto(${i})">${d.emoji}</div>
-    `).join('');
+    container.innerHTML = galeriData.map((d, i) => {
+      const active = i === lbIndex ? 'active' : '';
+      if (isImageSource(d.bg)) {
+        return `
+          <div class="lb-thumb ${active}" onclick="lightboxGoto(${i})">
+            <img src="${d.bg}" alt="${d.label || ''}" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+        `;
+      }
+      return `
+        <div class="lb-thumb ${active}" style="background:${d.bg};" onclick="lightboxGoto(${i})">
+          ${d.emoji}
+        </div>
+      `;
+    }).join('');
   }
   function lightboxGoto(idx) {
     lbIndex = idx;
@@ -1559,8 +1656,8 @@
   function openBerita(idx) {
     const d = beritaData[idx];
     const html = `
-      <div class="detail-hero-img" style="background:${d.bg};">
-        ${d.emoji}
+      <div class="detail-hero-img" style="${buildBgWrapperAndContent(d.bg, d.emoji, d.title).style}">
+        ${buildBgWrapperAndContent(d.bg, d.emoji, d.title).inner}
         <div class="detail-cat-badge">${d.cat}</div>
       </div>
       <div class="detail-meta">
@@ -1570,7 +1667,7 @@
       </div>
       <div class="detail-title">${d.title}</div>
       <div class="detail-divider"></div>
-      <div class="detail-body">${d.body}</div>
+      <div class="detail-body">${renderBody(d.body)}</div>
       <div class="detail-tags">${d.tags.map(t=>`<span class="detail-tag">#${t}</span>`).join('')}</div>
       <div class="detail-share">
         <span>Bagikan:</span>
@@ -1599,8 +1696,9 @@
           <p>${p.desc}</p>
         </div>
       </div>`).join('');
+    const bgCfg = buildBgWrapperAndContent(d.bg, d.emoji || '', d.title || '');
     const html = `
-      <div class="potensi-detail-hero" style="background:${d.bg};">${d.emoji}</div>
+      <div class="potensi-detail-hero" style="${bgCfg.style}">${bgCfg.inner}</div>
       <span style="display:inline-block;background:var(--emas);color:var(--hijau);font-size:11px;font-weight:700;padding:5px 14px;border-radius:50px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;">${d.cat}</span>
       <div class="detail-title">${d.title}</div>
       <div class="potensi-detail-stat-grid">${statsHtml}</div>
@@ -1634,26 +1732,30 @@
   }
 
   /* ────────────────────────────────────────────
-     ORIGINAL SCRIPTS
+     ORIGINAL SCRIPTS + SITE CONFIG
   ──────────────────────────────────────────── */
   async function initDynamicContent() {
     try {
-      const [beritaRes, galeriRes, potensiRes] = await Promise.all([
+      const [siteRes, beritaRes, galeriRes, potensiRes] = await Promise.all([
+        fetch('data/site.json'),
         fetch('data/berita.json'),
         fetch('data/galeri.json'),
         fetch('data/potensi.json')
       ]);
 
-      const [beritaJson, galeriJson, potensiJson] = await Promise.all([
+      const [siteJson, beritaJson, galeriJson, potensiJson] = await Promise.all([
+        siteRes.ok ? siteRes.json() : Promise.resolve(null),
         beritaRes.ok ? beritaRes.json() : Promise.resolve({ items: [] }),
         galeriRes.ok ? galeriRes.json() : Promise.resolve({ items: [] }),
         potensiRes.ok ? potensiRes.json() : Promise.resolve({ items: [] })
       ]);
 
+      siteConfig = siteJson;
       beritaData = Array.isArray(beritaJson.items) ? beritaJson.items : [];
       galeriData = Array.isArray(galeriJson.items) ? galeriJson.items : [];
       potensiData = Array.isArray(potensiJson.items) ? potensiJson.items : [];
 
+      applySiteSettings();
       renderBeritaGrid();
       renderGaleriGrid();
       renderPotensiGrid();
@@ -1666,12 +1768,13 @@
     const grid = document.getElementById('beritaGrid');
     if (!grid || !beritaData.length) return;
     grid.innerHTML = beritaData
-      .map(
-        (d, idx) => `
+      .map((d, idx) => {
+        const bgCfg = buildBgWrapperAndContent(d.bg, d.emoji || '', d.title || '');
+        return `
       <div class="berita-card" onclick="openBerita(${idx})">
-        <div class="berita-img" style="background:${d.bg};">
-          <div class="berita-cat">${d.cat}</div>
-          ${d.emoji || ''}
+        <div class="berita-img" style="${bgCfg.style}">
+          <div class="berita-cat">${d.cat || ''}</div>
+          ${bgCfg.inner}
         </div>
         <div class="berita-body">
           <div class="berita-date">📅 ${d.date || ''}</div>
@@ -1679,8 +1782,8 @@
           <div class="berita-excerpt">${d.excerpt || ''}</div>
           <div class="berita-readmore">Baca Selengkapnya →</div>
         </div>
-      </div>`
-      )
+      </div>`;
+      })
       .join('');
   }
 
@@ -1688,15 +1791,20 @@
     const grid = document.getElementById('galeriGrid');
     if (!grid || !galeriData.length) return;
     grid.innerHTML = galeriData
-      .map(
-        (d, idx) => `
+      .map((d, idx) => {
+        const hasImg = isImageSource(d.bg);
+        const inner = hasImg
+          ? `<img src="${d.bg}" alt="${d.label || ''}" style="width:100%;height:100%;object-fit:cover;">`
+          : (d.emoji || '');
+        const bgStyle = hasImg ? '' : `background:${d.bg};`;
+        return `
       <div class="galeri-item" onclick="openLightbox(${idx})">
-        <div class="galeri-bg" style="background:${d.bg};font-size:48px;">
-          ${d.emoji || ''}
+        <div class="galeri-bg" style="${bgStyle}font-size:48px;">
+          ${inner}
         </div>
         <div class="galeri-label">${d.label || ''}</div>
-      </div>`
-      )
+      </div>`;
+      })
       .join('');
   }
 
@@ -1704,11 +1812,16 @@
     const grid = document.getElementById('potensiGrid');
     if (!grid || !potensiData.length) return;
     grid.innerHTML = potensiData
-      .map(
-        (d, idx) => `
+      .map((d, idx) => {
+        const hasImg = isImageSource(d.bg);
+        const inner = hasImg
+          ? `<img src="${d.bg}" alt="${d.title || ''}" style="width:100%;height:100%;object-fit:cover;">`
+          : (d.emoji || '');
+        const bgStyle = hasImg ? '' : `background:${d.bg};`;
+        return `
       <div class="potensi-card" onclick="openPotensi(${idx})">
-        <div class="potensi-bg" style="background:${d.bg};">
-          ${d.emoji || ''}
+        <div class="potensi-bg" style="${bgStyle}">
+          ${inner}
         </div>
         <div class="potensi-overlay">
           <span class="potensi-tag">${d.cat || ''}</span>
@@ -1716,8 +1829,8 @@
           <div class="potensi-desc">${(d.desc || '').replace(/<[^>]+>/g, '').slice(0, 120)}${d.desc && d.desc.length > 120 ? '…' : ''}</div>
           <div style="margin-top:12px;font-size:13px;color:var(--emas-terang);font-weight:600;">Lihat Detail →</div>
         </div>
-      </div>`
-      )
+      </div>`;
+      })
       .join('');
   }
 
