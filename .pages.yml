@@ -1,0 +1,154 @@
+media: media
+
+content:
+  - name: homepage
+    label: Halaman Depan
+    type: file
+    path: index.html
+    format: raw
+    fields: []
+
+  - name: berita
+    label: Berita & Agenda
+    type: file
+    path: data/berita.json
+    format: json
+    fields:
+      - name: items
+        label: Daftar Berita
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.title} – {fields.date}"
+        fields:
+          - name: cat
+            label: Kategori
+            type: string
+          - name: emoji
+            label: Emoji
+            type: string
+          - name: bg
+            label: Background (CSS)
+            type: string
+            description: Nilai background CSS, misalnya 'linear-gradient(...)'
+          - name: date
+            label: Tanggal
+            type: string
+          - name: author
+            label: Penulis
+            type: string
+          - name: readtime
+            label: Lama Baca
+            type: string
+          - name: title
+            label: Judul
+            type: string
+            required: true
+          - name: excerpt
+            label: Ringkasan Singkat
+            type: text
+          - name: body
+            label: Isi Berita (HTML)
+            type: rich-text
+          - name: tags
+            label: Tag
+            type: string
+            list: true
+
+  - name: galeri
+    label: Galeri Kegiatan
+    type: file
+    path: data/galeri.json
+    format: json
+    fields:
+      - name: items
+        label: Daftar Foto
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.label}"
+        fields:
+          - name: emoji
+            label: Emoji
+            type: string
+          - name: bg
+            label: Background (CSS)
+            type: string
+          - name: label
+            label: Judul Foto
+            type: string
+          - name: desc
+            label: Deskripsi Singkat
+            type: text
+
+  - name: potensi
+    label: Potensi Desa
+    type: file
+    path: data/potensi.json
+    format: json
+    fields:
+      - name: items
+        label: Daftar Potensi
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.cat} – {fields.title}"
+        fields:
+          - name: cat
+            label: Kategori
+            type: string
+          - name: emoji
+            label: Emoji
+            type: string
+          - name: bg
+            label: Background (CSS)
+            type: string
+          - name: title
+            label: Judul
+            type: string
+          - name: stats
+            label: Statistik Ringkas
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.num} – {fields.lbl}"
+            fields:
+              - name: num
+                label: Angka
+                type: string
+              - name: lbl
+                label: Label
+                type: string
+          - name: desc
+            label: Deskripsi (HTML)
+            type: rich-text
+          - name: produk
+            label: Produk / Daya Tarik
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.icon} {fields.name}"
+            fields:
+              - name: icon
+                label: Icon/Emoji
+                type: string
+              - name: name
+                label: Nama
+                type: string
+              - name: desc
+                label: Deskripsi
+                type: text
+          - name: tags
+            label: Tag
+            type: string
+            list: true
+
+settings:
+  content:
+    merge: true
+
