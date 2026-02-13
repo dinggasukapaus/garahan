@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "emoji": "🌾",
+      "bg": "linear-gradient(135deg, #2a5e36, #5ba068)",
+      "label": "Gotong Royong Bersama Warga Desa",
+      "desc": "Warga bahu-membahu membersihkan lingkungan"
+    },
+    {
+      "emoji": "💉",
+      "bg": "linear-gradient(135deg, #1e3a6e, #3d7abf)",
+      "label": "Kegiatan Posyandu Balita",
+      "desc": "Pemeriksaan kesehatan rutin bulanan"
+    },
+    {
+      "emoji": "🏆",
+      "bg": "linear-gradient(135deg, #6e4b1e, #bf9240)",
+      "label": "Peringatan HUT Kemerdekaan RI",
+      "desc": "Semarak perayaan 17 Agustus di lapangan desa"
+    },
+    {
+      "emoji": "🗣️",
+      "bg": "linear-gradient(135deg, #5c1e1e, #bf4040)",
+      "label": "Musyawarah Desa",
+      "desc": "Rembug bersama perangkat dan warga desa"
+    },
+    {
+      "emoji": "🌳",
+      "bg": "linear-gradient(135deg, #1e5c5c, #40bfbf)",
+      "label": "Penanaman Pohon Bersama",
+      "desc": "Penghijauan lingkungan desa bersama pemuda"
+    }
+  ]
+}
