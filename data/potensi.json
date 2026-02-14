@@ -100,7 +100,8 @@
     {
       "cat": "Wisata",
       "emoji": "🌊",
-      "title": "Wisata Alam Desa Sukamaju",
+      "bg": "/media/cafe-garahan-5.jpg",
+      "title": "cafe pinus",
       "stats": [
         {
           "num": "3",
