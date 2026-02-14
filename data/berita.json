@@ -52,12 +52,13 @@
     },
     {
       "cat": "test berita",
+      "bg": "/media/wallhaven-zxrdwo.jpg",
       "date": "27-04-99",
       "author": "admin",
       "readtime": "10 menit",
       "title": "test judul",
       "excerpt": "test ringkasan",
-      "body": "![](/media/wallhaven-zxrdwo.jpg)\n\ntest ikan paus",
+      "body": "test ikan paus",
       "tags": [
         "test"
       ]
