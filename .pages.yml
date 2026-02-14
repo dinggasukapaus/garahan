@@ -172,6 +172,14 @@ content:
       - name: villageHeadPeriod
         label: Periode Jabatan Kepala Desa
         type: string
+      - name: villageHeadPhoto
+        label: Foto Kepala Desa
+        type: image
+        description: Upload foto kepala desa. Foto akan tersimpan di folder media/
+      - name: villagePhoto
+        label: Foto Kantor Desa
+        type: image
+        description: Upload foto kantor/gedung desa. Foto akan tersimpan di folder media/
 
 settings:
   content:
