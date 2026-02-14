@@ -1011,7 +1011,8 @@
 <section class="sambutan">
   <div class="sambutan-inner animate">
     <div class="sambutan-kades">
-      <div class="kades-foto">👨‍💼</div>
+      <!-- <div class="kades-foto">👨‍💼</div> -->
+       <div class="kades-foto" id="kadesFoto"></div>
       <div class="kades-name" id="villageHeadNameText">H. Ahmad Sudirman</div>
       <div class="kades-jabatan" id="villageHeadTitleText">Kepala Desa Sukamaju</div>
       <div style="margin-top:20px; height:2px; background:rgba(255,255,255,0.2);"></div>
@@ -1566,6 +1567,20 @@ function resolveImagePath(bg) {
     setTextContent('villageHeadNameText', vhName);
     setTextContent('villageHeadTitleText', vhTitle);
     setTextContent('villageHeadPeriodText', vhPeriod);
+
+    if (siteConfig.villageHeadPhoto) {
+    const kadesFotoEl = document.getElementById('kadesFoto');
+    if (kadesFotoEl) {
+      kadesFotoEl.innerHTML = `<img src="${resolveImagePath(siteConfig.villageHeadPhoto)}" alt="${vhName}" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">`;
+    }
+  }
+  
+  if (siteConfig.villagePhoto) {
+    const profilFotoEl = document.getElementById('profilFoto');
+    if (profilFotoEl) {
+      profilFotoEl.innerHTML = `<img src="${resolveImagePath(siteConfig.villagePhoto)}" alt="Kantor ${vName}" style="width:100%;height:100%;object-fit:cover;">`;
+    }
+  }
   }
 
   /* ────────────────────────────────────────────
