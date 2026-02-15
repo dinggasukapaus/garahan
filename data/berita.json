@@ -62,6 +62,20 @@
       "tags": [
         "test"
       ]
+    },
+    {
+      "cat": "test judul 2",
+      "emoji": "🌳",
+      "bg": "/media/WhatsApp Image 2026-02-14 at 6.46.34 PM.jpeg",
+      "date": "13 02 2026",
+      "author": "yongki",
+      "readtime": "13 menit",
+      "title": "yongki mancing",
+      "excerpt": "mancing",
+      "body": "mancing gacorrr",
+      "tags": [
+        "mancing"
+      ]
     }
   ]
 }
