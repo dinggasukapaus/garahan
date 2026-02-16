@@ -1,0 +1,52 @@
+{
+  "budget": {
+    "year": 2025,
+    "title": "Anggaran Pendapatan & Belanja Desa",
+    "total": "1,2 M",
+    "totalAmount": 1200000000
+  },
+  "documents": [
+    {
+      "icon": "📄",
+      "title": "APBDes 2026.pdf",
+      "url": "#"
+    },
+    {
+      "icon": "📊",
+      "title": "Realisasi Q1 2026.pdf",
+      "url": "#"
+    },
+    {
+      "icon": "📊",
+      "title": "RPMDes dan RKPDes 2026.pdf",
+      "url": "#"
+    }
+  ],
+  "allocations": [
+    {
+      "name": "🏗️ Pembangunan Infrastruktur",
+      "percentage": 40,
+      "amount": 480000000
+    },
+    {
+      "name": "👥 Pemberdayaan Masyarakat",
+      "percentage": 25,
+      "amount": 300000000
+    },
+    {
+      "name": "🏥 Kesehatan & Sosial",
+      "percentage": 20,
+      "amount": 240000000
+    },
+    {
+      "name": "🎓 Pendidikan & Budaya",
+      "percentage": 10,
+      "amount": 120000000
+    },
+    {
+      "name": "🏢 Operasional Pemerintahan",
+      "percentage": 5,
+      "amount": 60000000
+    }
+  ]
+}

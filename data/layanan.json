@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "icon": "🏢",
+      "title": "Surat Keterangan Usaha",
+      "description": "Untuk keperluan perizinan usaha UMKM dan bisnis lokal"
+    },
+    {
+      "icon": "💸",
+      "title": "Surat Keterangan Tidak Mampu",
+      "description": "Untuk akses beasiswa, layanan kesehatan gratis, dll"
+    },
+    {
+      "icon": "🏠",
+      "title": "Surat Domisili",
+      "description": "Keterangan tempat tinggal resmi di Desa Sukamaju"
+    },
+    {
+      "icon": "🪪",
+      "title": "Surat Pengantar KTP / KK",
+      "description": "Pengantar untuk pembuatan KTP dan Kartu Keluarga"
+    },
+    {
+      "icon": "👶",
+      "title": "Surat Kelahiran / Kematian",
+      "description": "Keterangan akta kelahiran dan kematian warga"
+    }
+  ]
+}

@@ -1130,48 +1130,7 @@
         <span class="section-tag">Layanan Online</span>
         <h2 class="section-title">Layanan Administrasi Desa</h2>
         <p class="section-desc" style="margin-bottom:32px;">Masyarakat dapat mengajukan surat secara online tanpa harus datang ke kantor desa. Mudah, cepat, dan transparan.</p>
-        <div class="layanan-list">
-          <div class="layanan-item">
-            <div class="layanan-icon">🏢</div>
-            <div class="layanan-info">
-              <h4>Surat Keterangan Usaha</h4>
-              <p>Untuk keperluan perizinan usaha UMKM dan bisnis lokal</p>
-            </div>
-            <div class="layanan-arrow">→</div>
-          </div>
-          <div class="layanan-item">
-            <div class="layanan-icon">💸</div>
-            <div class="layanan-info">
-              <h4>Surat Keterangan Tidak Mampu</h4>
-              <p>Untuk akses beasiswa, layanan kesehatan gratis, dll</p>
-            </div>
-            <div class="layanan-arrow">→</div>
-          </div>
-          <div class="layanan-item">
-            <div class="layanan-icon">🏠</div>
-            <div class="layanan-info">
-              <h4>Surat Domisili</h4>
-              <p>Keterangan tempat tinggal resmi di Desa Sukamaju</p>
-            </div>
-            <div class="layanan-arrow">→</div>
-          </div>
-          <div class="layanan-item">
-            <div class="layanan-icon">🪪</div>
-            <div class="layanan-info">
-              <h4>Surat Pengantar KTP / KK</h4>
-              <p>Pengantar untuk pembuatan KTP dan Kartu Keluarga</p>
-            </div>
-            <div class="layanan-arrow">→</div>
-          </div>
-          <div class="layanan-item">
-            <div class="layanan-icon">👶</div>
-            <div class="layanan-info">
-              <h4>Surat Kelahiran / Kematian</h4>
-              <p>Keterangan akta kelahiran dan kematian warga</p>
-            </div>
-            <div class="layanan-arrow">→</div>
-          </div>
-        </div>
+        <div class="layanan-list" id="layananListContainer"></div>
       </div>
       <div>
         <div style="background:var(--krem); border-radius:24px; padding:36px; margin-bottom:24px;">
@@ -1196,14 +1155,6 @@
             </div>
           </div>
         </div>
-        <!-- <div style="background:var(--hijau);border-radius:24px;padding:28px;color:white;display:flex;gap:16px;align-items:center;">
-          <div style="font-size:40px;">⏰</div>
-          <div>
-            <h4 style="font-weight:700;margin-bottom:6px;">Jam Pelayanan</h4>
-            <p style="color:rgba(255,255,255,0.8);font-size:14px;">Senin – Jumat</p>
-            <p style="color:var(--emas-terang);font-weight:700;font-size:20px;">08.00 – 14.00 WIB</p>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -1232,71 +1183,17 @@
     <div class="trans-grid animate">
       <div class="trans-info">
         <div class="apb-card">
-          <div class="apb-year">APBDes Tahun 2025</div>
-          <div class="apb-title">Anggaran Pendapatan & Belanja Desa</div>
-          <div class="apb-amount">Rp 1,2 M</div>
-          <div class="apb-label">Total Anggaran Tahun 2025</div>
+          <div class="apb-year" id="apbYear">APBDes Tahun 2025</div>
+          <div class="apb-title" id="apbTitle">Anggaran Pendapatan & Belanja Desa</div>
+          <div class="apb-amount" id="apbAmount">Rp 1,2 M</div>
+          <div class="apb-label" id="apbLabel">Total Anggaran Tahun 2025</div>
         </div>
         <div style="background:white;border-radius:16px;padding:24px;">
           <h4 style="font-weight:700;font-size:15px;margin-bottom:16px;">📥 Unduh Dokumen</h4>
-          <div style="display:flex;flex-direction:column;gap:10px;">
-            <a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #e8e4dc;border-radius:10px;text-decoration:none;color:var(--teks);font-size:13px;font-weight:600;transition:border-color 0.2s;">
-              <span style="font-size:20px;">📄</span> APBDes 2026.pdf
-              <span style="margin-left:auto;color:var(--hijau);">↓</span>
-            </a>
-            <a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #e8e4dc;border-radius:10px;text-decoration:none;color:var(--teks);font-size:13px;font-weight:600;">
-              <span style="font-size:20px;">📊</span> Realisasi Q1 2026.pdf
-              <span style="margin-left:auto;color:var(--hijau);">↓</span>
-            </a>
-            <a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #e8e4dc;border-radius:10px;text-decoration:none;color:var(--teks);font-size:13px;font-weight:600;">
-              <span style="font-size:20px;">📊</span> RPMDes dan RKPDes 2026.pdf
-              <span style="margin-left:auto;color:var(--hijau);">↓</span>
-            </a>
-          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;" id="apbDocs"></div>
         </div>
       </div>
-      <div class="anggaran-list">
-        <div class="anggaran-item">
-          <div class="ang-header">
-            <span class="ang-name">🏗️ Pembangunan Infrastruktur</span>
-            <span class="ang-percent">40%</span>
-          </div>
-          <div class="ang-bar"><div class="ang-fill" style="width:40%"></div></div>
-          <div class="ang-amount">Rp 480.000.000</div>
-        </div>
-        <div class="anggaran-item">
-          <div class="ang-header">
-            <span class="ang-name">👥 Pemberdayaan Masyarakat</span>
-            <span class="ang-percent">25%</span>
-          </div>
-          <div class="ang-bar"><div class="ang-fill" style="width:25%"></div></div>
-          <div class="ang-amount">Rp 300.000.000</div>
-        </div>
-        <div class="anggaran-item">
-          <div class="ang-header">
-            <span class="ang-name">🏥 Kesehatan & Sosial</span>
-            <span class="ang-percent">20%</span>
-          </div>
-          <div class="ang-bar"><div class="ang-fill" style="width:20%"></div></div>
-          <div class="ang-amount">Rp 240.000.000</div>
-        </div>
-        <div class="anggaran-item">
-          <div class="ang-header">
-            <span class="ang-name">🎓 Pendidikan & Budaya</span>
-            <span class="ang-percent">10%</span>
-          </div>
-          <div class="ang-bar"><div class="ang-fill" style="width:10%"></div></div>
-          <div class="ang-amount">Rp 120.000.000</div>
-        </div>
-        <div class="anggaran-item">
-          <div class="ang-header">
-            <span class="ang-name">🏢 Operasional Pemerintahan</span>
-            <span class="ang-percent">5%</span>
-          </div>
-          <div class="ang-bar"><div class="ang-fill" style="width:5%"></div></div>
-          <div class="ang-amount">Rp 60.000.000</div>
-        </div>
-      </div>
+      <div class="anggaran-list" id="anggaranList"></div>
     </div>
   </div>
 </section>
@@ -1677,6 +1574,16 @@ function resolveImagePath(bg) {
   let potensiData = [];
 
   /* ────────────────────────────────────────────
+     DATA LAYANAN
+  ──────────────────────────────────────────── */
+  let layananData = [];
+
+  /* ────────────────────────────────────────────
+     DATA TRANSPARANSI
+  ──────────────────────────────────────────── */
+  let transparansiData = null;
+
+  /* ────────────────────────────────────────────
      OPEN / CLOSE LOGIC
   ──────────────────────────────────────────── */
   function openDetail(html) {
@@ -1778,29 +1685,37 @@ function resolveImagePath(bg) {
   ──────────────────────────────────────────── */
   async function initDynamicContent() {
     try {
-      const [siteRes, beritaRes, galeriRes, potensiRes] = await Promise.all([
+      const [siteRes, beritaRes, galeriRes, potensiRes, layananRes, transparansiRes] = await Promise.all([
         fetch('data/site.json'),
         fetch('data/berita.json'),
         fetch('data/galeri.json'),
-        fetch('data/potensi.json')
+        fetch('data/potensi.json'),
+        fetch('data/layanan.json'),
+        fetch('data/transparansi.json')
       ]);
 
-      const [siteJson, beritaJson, galeriJson, potensiJson] = await Promise.all([
+      const [siteJson, beritaJson, galeriJson, potensiJson, layananJson, transparansiJson] = await Promise.all([
         siteRes.ok ? siteRes.json() : Promise.resolve(null),
         beritaRes.ok ? beritaRes.json() : Promise.resolve({ items: [] }),
         galeriRes.ok ? galeriRes.json() : Promise.resolve({ items: [] }),
-        potensiRes.ok ? potensiRes.json() : Promise.resolve({ items: [] })
+        potensiRes.ok ? potensiRes.json() : Promise.resolve({ items: [] }),
+        layananRes.ok ? layananRes.json() : Promise.resolve({ items: [] }),
+        transparansiRes.ok ? transparansiRes.json() : Promise.resolve(null)
       ]);
 
       siteConfig = siteJson;
       beritaData = Array.isArray(beritaJson.items) ? beritaJson.items : [];
       galeriData = Array.isArray(galeriJson.items) ? galeriJson.items : [];
       potensiData = Array.isArray(potensiJson.items) ? potensiJson.items : [];
+      layananData = Array.isArray(layananJson.items) ? layananJson.items : [];
+      transparansiData = transparansiJson;
 
       applySiteSettings();
       renderBeritaGrid();
       renderGaleriGrid();
       renderPotensiGrid();
+      renderLayananGrid();
+      renderTransparansiSection();
     } catch (err) {
       console.error('Gagal memuat data dinamis:', err);
     }
@@ -1874,6 +1789,72 @@ function resolveImagePath(bg) {
       </div>`;
       })
       .join('');
+  }
+
+  function renderLayananGrid() {
+    const container = document.getElementById('layananListContainer');
+    if (!container || !layananData.length) return;
+    const html = layananData.map(item => `
+      <div class="layanan-item">
+        <div class="layanan-icon">${item.icon || '📋'}</div>
+        <div class="layanan-info">
+          <h4>${item.title || 'Layanan'}</h4>
+          <p>${item.description || ''}</p>
+        </div>
+        <div class="layanan-arrow">→</div>
+      </div>
+    `).join('');
+    container.innerHTML = html;
+  }
+
+  function renderTransparansiSection() {
+    if (!transparansiData) return;
+    
+    // Update budget info
+    if (transparansiData.budget) {
+      const b = transparansiData.budget;
+      const yearEl = document.getElementById('apbYear');
+      const titleEl = document.getElementById('apbTitle');
+      const amountEl = document.getElementById('apbAmount');
+      const labelEl = document.getElementById('apbLabel');
+      
+      if (yearEl) yearEl.textContent = `APBDes Tahun ${b.year || 2025}`;
+      if (titleEl) titleEl.textContent = b.title || 'Anggaran Pendapatan & Belanja Desa';
+      if (amountEl) amountEl.textContent = `Rp ${b.total || '0'}`;
+      if (labelEl) labelEl.textContent = `Total Anggaran Tahun ${b.year || 2025}`;
+    }
+
+    // Update documents
+    if (transparansiData.documents && Array.isArray(transparansiData.documents)) {
+      const docContainer = document.getElementById('apbDocs');
+      if (docContainer) {
+        const docHtml = transparansiData.documents.map(doc => `
+          <a href="${doc.url || '#'}" style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #e8e4dc;border-radius:10px;text-decoration:none;color:var(--teks);font-size:13px;font-weight:600;transition:border-color 0.2s;">
+            <span style="font-size:20px;">${doc.icon || '📄'}</span> ${doc.title || 'Dokumen'}
+            <span style="margin-left:auto;color:var(--hijau);">↓</span>
+          </a>
+        `).join('');
+        docContainer.innerHTML = docHtml;
+      }
+    }
+
+    // Update allocations
+    if (transparansiData.allocations && Array.isArray(transparansiData.allocations)) {
+      const allocContainer = document.getElementById('anggaranList');
+      if (allocContainer) {
+        const allocHtml = transparansiData.allocations.map(alloc => `
+          <div class="anggaran-item">
+            <div class="ang-header">
+              <span class="ang-name">${alloc.name || 'Alokasi'}</span>
+              <span class="ang-percent">${alloc.percentage || 0}%</span>
+            </div>
+            <div class="ang-bar"><div class="ang-fill" style="width:${alloc.percentage || 0}%"></div></div>
+            <div class="ang-amount">Rp ${(alloc.amount || 0).toLocaleString('id-ID')}</div>
+          </div>
+        `).join('');
+        allocContainer.innerHTML = allocHtml;
+      }
+    }
   }
 
   document.addEventListener('DOMContentLoaded', initDynamicContent);

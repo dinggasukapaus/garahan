@@ -148,6 +148,88 @@ content:
             type: string
             list: true
 
+  - name: layanan
+    label: Layanan Administrasi
+    type: file
+    path: data/layanan.json
+    format: json
+    fields:
+      - name: items
+        label: Daftar Layanan
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.title}"
+        fields:
+          - name: icon
+            label: Icon/Emoji
+            type: string
+          - name: title
+            label: Nama Layanan
+            type: string
+            required: true
+          - name: description
+            label: Deskripsi Layanan
+            type: text
+
+  - name: transparansi
+    label: Transparansi Anggaran
+    type: file
+    path: data/transparansi.json
+    format: json
+    fields:
+      - name: budget
+        label: Informasi Anggaran
+        type: object
+        fields:
+          - name: year
+            label: Tahun Anggaran
+            type: number
+          - name: title
+            label: Judul Anggaran
+            type: string
+          - name: total
+            label: Total Anggaran (format text)
+            type: string
+          - name: totalAmount
+            label: Total Anggaran (nilai angka)
+            type: number
+      - name: documents
+        label: Dokumen Transparansi
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.title}"
+        fields:
+          - name: icon
+            label: Icon
+            type: string
+          - name: title
+            label: Nama Dokumen
+            type: string
+          - name: url
+            label: URL Dokumen
+            type: string
+      - name: allocations
+        label: Alokasi Anggaran
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.name}"
+        fields:
+          - name: name
+            label: Nama Alokasi
+            type: string
+          - name: percentage
+            label: Persentase (%)
+            type: number
+          - name: amount
+            label: Jumlah (Rupiah)
+            type: number
+
   - name: settings
     label: Pengaturan Situs
     type: file
