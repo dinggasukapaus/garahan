@@ -3,31 +3,43 @@
     {
       "icon": "🏢",
       "title": "Surat Keterangan Usaha",
-      "description": "Untuk keperluan perizinan usaha UMKM dan bisnis lokal"
+      "description": "Untuk keperluan perizinan usaha UMKM dan bisnis lokal",
+      "alur": "<ol><li>Isi form pengajuan online atau ambil formulir di kantor desa</li><li>Verifikasi berkas oleh petugas (1-3 hari kerja)</li><li>Ambil surat di kantor atau terima via email</li></ol>",
+      "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
     },
     {
       "icon": "💸",
       "title": "Surat Keterangan Tidak Mampu",
-      "description": "Untuk akses beasiswa, layanan kesehatan gratis, dll"
+      "description": "Untuk akses beasiswa, layanan kesehatan gratis, dll",
+      "alur": "<ol><li>Mengisi form permohonan dan melampirkan bukti penghasilan</li><li>Verifikasi dan survei lapangan jika diperlukan</li><li>Penerbitan SKTM oleh Kepala Desa</li></ol>",
+      "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
     },
     {
       "icon": "🏠",
       "title": "Surat Domisili",
-      "description": "Keterangan tempat tinggal resmi di Desa Sukamaju"
+      "description": "Keterangan tempat tinggal resmi di Desa Sukamaju",
+      "alur": "<ol><li>Isi formulir permohonan domisili</li><li>Lampirkan KTP/KK dan bukti alamat</li><li>Kelurahan/Desa memverifikasi dan menerbitkan surat</li></ol>",
+      "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
     },
     {
       "icon": "🪪",
       "title": "Surat Pengantar KTP / KK",
-      "description": "Pengantar untuk pembuatan KTP dan Kartu Keluarga"
+      "description": "Pengantar untuk pembuatan KTP dan Kartu Keluarga",
+      "alur": "<ol><li>Ajukan permohonan di kantor desa dengan melampirkan dokumen identitas</li><li>Petugas menerbitkan surat pengantar</li><li>Bawa pengantar ke Dinas Kependudukan untuk proses lanjut</li></ol>",
+      "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
     },
     {
       "icon": "👶",
       "title": "Surat Kelahiran / Kematian",
-      "description": "Keterangan akta kelahiran dan kematian warga"
+      "description": "Keterangan akta kelahiran dan kematian warga",
+      "alur": "<ol><li>Lapor ke RT/RW dan ajukan berkas ke kantor desa</li><li>Petugas mendata dan memproses pengajuan</li><li>Ambil dokumen resmi di kantor desa</li></ol>",
+      "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
     },
     {
       "title": "test layanan 1",
-      "description": "test deskripsi layana 1"
+      "description": "test deskripsi layana 1",
+      "alur": "<ol><li>Langkah 1</li><li>Langkah 2</li><li>Langkah 3</li></ol>",
+      "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
     }
   ]
 }
