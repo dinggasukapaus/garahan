@@ -24,6 +24,10 @@
       "icon": "👶",
       "title": "Surat Kelahiran / Kematian",
       "description": "Keterangan akta kelahiran dan kematian warga"
+    },
+    {
+      "title": "test layanan 1",
+      "description": "test deskripsi layana 1"
     }
   ]
 }
