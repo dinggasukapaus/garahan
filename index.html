@@ -3,9 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Resmi Desa Sukamaju</title>
+<meta name="description" content="Website Resmi Desa Garahan, Silo Jember - Berita, galeri, layanan administrasi, potensi desa, dan transparansi anggaran.">
+<meta name="keywords" content="Desa Garahan, Silo, Jember, Website Desa, Layanan Administrasi, Transparansi Anggaran, Berita Desa">
+<meta name="author" content="Pemerintah Desa Garahan">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="google-site-verification" content="">
+<meta name="msvalidate.01" content="">
+<meta name="theme-color" content="#1a5c38">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://desagarahan.id/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://desagarahan.id/">
+<meta property="og:title" content="Desa Garahan - Silo, Jember">
+<meta property="og:description" content="Website Resmi Desa Garahan. Layanan administrasi, berita, galeri, potensi desa, dan transparansi anggaran.">
+<meta property="og:image" content="https://desagarahan.id/media/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="id_ID">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Desa Garahan - Website Resmi">
+<meta name="twitter:description" content="Website Resmi Desa Garahan, Kecamatan Silo, Jember. Informasi desa, layanan administrasi, berita, dan transparansi anggaran.">
+<meta name="twitter:image" content="https://desagarahan.id/media/og-image.jpg">
+
+<!-- Priority Hints -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-family='Arial' fill='%231a5c38'>🌾</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%231a5c38' width='180' height='180'/><text x='50%' y='50%' font-size='100' text-anchor='middle' dominant-baseline='middle' font-family='Arial' fill='white'>🌾</text></svg>">
+
+<title>Desa Garahan | Silo, Jember - Website Resmi</title>
 <style>
   :root {
     --hijau: #1a5c38;
@@ -1383,8 +1418,8 @@
     );
   }
 
-  const MEDIA_ROOT = "https://dinggasukapaus.github.io/garahan/media/";
-const BASE_ROOT  = "https://dinggasukapaus.github.io/garahan/";
+  const MEDIA_ROOT = "https://desagarahan.id/media/";
+const BASE_ROOT  = "https://desagarahan.id/";
 
 function resolveImagePath(bg) {
   if (!bg) return bg;
@@ -1628,6 +1663,42 @@ function resolveImagePath(bg) {
   }
 
   /* ────────────────────────────────────────────
+     LAYANAN DETAIL
+  ──────────────────────────────────────────── */
+  function openLayanan(idx) {
+    const d = layananData[idx];
+    const html = `
+      <div style="text-align:center; margin-bottom:24px;">
+        <div style="font-size:56px; margin-bottom:16px;">${d.icon || '📋'}</div>
+        <div class="detail-title" style="margin-bottom:8px;">${d.title || 'Layanan'}</div>
+        <div style="height:3px; width:60px; background:var(--emas); margin:0 auto 20px; border-radius:50px;"></div>
+      </div>
+      <div class="detail-body" style="margin-bottom:24px;">
+        <p style="font-size:15px; line-height:1.8; color:var(--teks);">${d.description || ''}</p>
+      </div>
+      <div style="background:rgba(77,175,120,0.1); border-radius:16px; padding:20px; margin-bottom:20px;">
+        <h4 style="font-weight:700; margin-bottom:12px; color:var(--hijau);">📋 Alur Pengajuan</h4>
+        <ol style="margin-left:16px; font-size:14px; line-height:1.8; color:#666;">
+          <li>Isi form pengajuan di kantor desa atau online</li>
+          <li>Tunggu proses verifikasi (1-3 hari kerja)</li>
+          <li>Ambil dokumen di kantor desa</li>
+        </ol>
+      </div>
+      <div style="background:rgba(26,92,56,0.08); border-radius:16px; padding:20px;">
+        <h4 style="font-weight:700; margin-bottom:12px; color:var(--hijau);">⏰ Jam Layanan</h4>
+        <p style="font-size:14px; color:#666; margin-bottom:5px;">📅 Senin - Jumat</p>
+        <p style="font-size:15px; font-weight:700; color:var(--hijau);">08.00 - 14.00 WIB</p>
+      </div>
+      <div class="detail-share" style="margin-top:24px;">
+        <span>Bagikan:</span>
+        <button class="share-btn share-wa" onclick="shareWA('${d.title}')">💬 WhatsApp</button>
+        <button class="share-btn share-copy" onclick="copyLink()">🔗 Salin Link</button>
+      </div>
+    `;
+    openDetail(html);
+  }
+
+  /* ────────────────────────────────────────────
      POTENSI DETAIL
   ──────────────────────────────────────────── */
   function openPotensi(idx) {
@@ -1794,8 +1865,8 @@ function resolveImagePath(bg) {
   function renderLayananGrid() {
     const container = document.getElementById('layananListContainer');
     if (!container || !layananData.length) return;
-    const html = layananData.map(item => `
-      <div class="layanan-item">
+    const html = layananData.map((item, idx) => `
+      <div class="layanan-item" onclick="openLayanan(${idx})">
         <div class="layanan-icon">${item.icon || '📋'}</div>
         <div class="layanan-info">
           <h4>${item.title || 'Layanan'}</h4>
@@ -1886,5 +1957,116 @@ function resolveImagePath(bg) {
     });
   });
 </script>
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://desagarahan.id",
+  "name": "Desa Garahan",
+  "description": "Pemerintah Desa Garahan, Silo, Jember - Website Resmi",
+  "url": "https://desagarahan.id",
+  "telephone": "+62-XXXX-XXXX",
+  "email": "admin@garahan.desa.id",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Kecamatan Silo, Kabupaten Jember, Provinsi Jawa Timur, Indonesia"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Desa Garahan",
+    "addressLocality": "Silo",
+    "addressRegion": "Jember",
+    "postalCode": "",
+    "addressCountry": "ID"
+  },
+  "image": "https://garahan.desa.id/media/og-image.jpg",
+  "sameAs": [
+    "https://www.facebook.com/desagarahan",
+    "https://www.instagram.com/desagarahan"
+  ]
+}
+</script>
+
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentOrganization",
+  "name": "Pemerintah Desa Garahan",
+  "url": "https://desagarahan.id",
+  "logo": "https://garahan.desa.id/img/logo.png",
+  "description": "Website Resmi Pemerintah Desa Garahan",
+  "foundingDate": "1945",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ID",
+    "addressRegion": "Jember",
+    "addressLocality": "Silo"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "telephone": "+62-XXXX-XXXX",
+    "email": "admin@garahan.desa.id"
+  }
+}
+</script>
+
+<!-- Website Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Desa Garahan",
+  "url": "https://desagarahan.id",
+  "description": "Website Resmi Pemerintah Desa Garahan, Silo, Jember",
+  "inLanguage": "id-ID",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://desagarahan.id?search={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://desagarahan.id"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Berita",
+      "item": "https://desagarahan.id#berita"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Layanan",
+      "item": "https://desagarahan.id#layanan"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Potensi",
+      "item": "https://desagarahan.id#potensi"
+    }
+  ]
+}
+</script>
+
 </body>
 </html>

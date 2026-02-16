@@ -1,0 +1,51 @@
+# Desa Garahan Website - Robots Configuration
+# Last Modified: 2026-02-17
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /.*/.*/.*/
+
+# Allow specific media files
+Allow: /media/
+
+# Crawl delay (5 seconds - conservative)
+Crawl-delay: 5
+
+# Request rate (not more than 1 request per 5 seconds)
+Request-rate: 1/5s
+
+# Sitemap location
+Sitemap: https://desagarahan.id/sitemap.xml
+
+# Google specific rules
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 0
+
+# Bing specific rules
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+# Other common crawlers
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
