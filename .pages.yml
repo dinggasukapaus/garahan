@@ -174,12 +174,10 @@ content:
             type: text
           - name: alur
             label: Alur Pengajuan
-            type: rich-text
-            description: Deskripsikan alur pengajuan; dapat berupa daftar langkah.
+            type: text
           - name: jam
             label: Jam Layanan
             type: string
-            description: Contoh: "Senin - Jumat: 08.00 - 14.00 WIB"
 
   - name: transparansi
     label: Transparansi Anggaran
