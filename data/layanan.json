@@ -38,7 +38,7 @@
     {
       "title": "test layanan 1",
       "description": "test deskripsi layana 1",
-      "alur": "<ol><li>Langkah 1</li><li>Langkah 2</li><li>Langkah 3</li></ol>",
+      "alur": "1.\n2.\n3.\n4.\n",
       "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
     }
   ]
