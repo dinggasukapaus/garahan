@@ -24,29 +24,20 @@
   ],
   "allocations": [
     {
-      "name": "🏗️ Pembangunan Infrastruktur",
-      "percentage": 40,
-      "amount": 480000000
+      "name": "🏗️ Pembangunan Infrastruktur"
     },
     {
-      "name": "👥 Pemberdayaan Masyarakat",
-      "percentage": 25,
-      "amount": 300000000
+      "name": "👥 Pemberdayaan Masyarakat"
     },
     {
-      "name": "🏥 Kesehatan & Sosial",
-      "percentage": 20,
-      "amount": 240000000
+      "name": "🏥 Kesehatan & Sosial"
     },
     {
       "name": "🎓 Pendidikan & Budaya",
-      "percentage": 10,
-      "amount": 120000000
+      "percentage": -2
     },
     {
-      "name": "🏢 Operasional Pemerintahan",
-      "percentage": 5,
-      "amount": 60000000
+      "name": "🏢 Operasional Pemerintahan"
     }
   ]
 }
