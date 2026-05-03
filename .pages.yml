@@ -268,6 +268,10 @@ content:
         label: Foto Kantor Desa
         type: image
         description: Upload foto kantor/gedung desa. Foto akan tersimpan di folder media/
+      - name: profilMapImage
+        label: Gambar Lokasi / Sejarah (blok peta)
+        type: image
+        description: Gambar opsional di atas peta Google (mis. panorama desa, landmark). Kosongkan jika hanya ingin menampilkan peta.
 
 settings:
   content:

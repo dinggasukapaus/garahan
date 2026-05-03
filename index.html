@@ -440,6 +440,10 @@
   }
   .profil-img-badge .num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; color: var(--hijau); }
   .profil-img-badge .txt { font-size: 11px; color: var(--hijau); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+  .profil-lokasi-foto-outer { margin-bottom: 24px; }
+  .profil-lokasi-foto-outer .profil-img-main { margin-bottom: 0; }
+  .mapouter { max-width: 100%; width: min(500px, 100%); }
+  .mapouter .gmap_canvas { width: 100% !important; max-width: 500px; }
   .visi-misi { display: grid; gap: 20px; margin-top: 32px; }
   .vm-card {
     background: white; border-radius: 16px; padding: 24px;
@@ -1104,8 +1108,14 @@
       </div>
     </div>
   </div>
+  <!-- Gambar lokasi (upload via CMS: data/site.json → profilMapImage) + peta -->
   <div style="margin-top: 100px;" class="profil-grid animate">
     <div class="profil-visual">
+      <div id="profilLokasiFotoOuter" class="profil-lokasi-foto-outer" style="display:none;" aria-hidden="true">
+        <div class="profil-img-main">
+          <div class="profil-img-placeholder" id="profilLokasiFoto">📍</div>
+        </div>
+      </div>
       <div class="mapouter" style="position:relative; text-align:right; width:500px; height:450px;">
         <div class="gmap_canvas" style="overflow:hidden; background:none!important; width:500px; height:450px;">
           <iframe width="500px" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/search?q=desa%20garahan&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
@@ -1123,6 +1133,7 @@
       
     </div>
   </div>
+  <!-- end image for map -->
 </section>
 
 <!-- DATA DESA -->
@@ -1540,6 +1551,17 @@ function resolveImagePath(bg) {
     if (profilFotoEl) {
       profilFotoEl.innerHTML = `<img src="${resolveImagePath(siteConfig.villagePhoto)}" alt="Kantor ${vName}" style="width:100%;height:100%;object-fit:cover;">`;
     }
+  }
+
+  const lokasiOuter = document.getElementById('profilLokasiFotoOuter');
+  const lokasiFotoEl = document.getElementById('profilLokasiFoto');
+  if (siteConfig.profilMapImage && lokasiOuter && lokasiFotoEl) {
+    lokasiOuter.style.display = 'block';
+    lokasiOuter.removeAttribute('aria-hidden');
+    lokasiFotoEl.innerHTML = `<img src="${resolveImagePath(siteConfig.profilMapImage)}" alt="Lokasi ${vName}" style="width:100%;height:100%;object-fit:cover;">`;
+  } else if (lokasiOuter) {
+    lokasiOuter.style.display = 'none';
+    lokasiOuter.setAttribute('aria-hidden', 'true');
   }
   }
 
