@@ -1,22 +1,6 @@
 {
   "items": [
     {
-      "cat": "Berita Desa",
-      "emoji": "🌱",
-      "date": "10 Februari 2025",
-      "author": "Admin Desa",
-      "readtime": "3 menit baca",
-      "title": "Pelaksanaan Gotong Royong Pembersihan Sungai Citarum",
-      "excerpt": "Seluruh warga bersama perangkat desa melaksanakan gotong royong membersihkan aliran sungai sebagai upaya menjaga kebersihan lingkungan.",
-      "body": "...................................",
-      "tags": [
-        "Lingkungan",
-        "Gotong Royong",
-        "Kebersihan",
-        "Citarum"
-      ]
-    },
-    {
       "cat": "Pengumuman",
       "emoji": "📢",
       "date": "5 Februari 2025",
