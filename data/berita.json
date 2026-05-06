@@ -1,23 +1,6 @@
 {
   "items": [
     {
-      "cat": "Pengumuman",
-      "emoji": "📢",
-      "date": "5 Februari 2025",
-      "author": "Bidan Desa",
-      "readtime": "2 menit baca",
-      "title": "Jadwal Posyandu Bulan Februari 2025",
-      "excerpt": "Posyandu Balita dan Lansia akan dilaksanakan pada tanggal di Balai Desa mulai pukul 08.00 WIB.",
-      "body": "........................................................",
-      "tags": [
-        "Kesehatan",
-        "Posyandu",
-        "Balita",
-        "Lansia",
-        "Pengumuman"
-      ]
-    },
-    {
       "cat": "Agenda",
       "emoji": "📅",
       "date": "1 Februari 2025",
@@ -46,6 +29,7 @@
       "tags": [
         "test"
       ]
-    }
+    },
+    {}
   ]
 }
