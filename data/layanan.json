@@ -23,10 +23,10 @@
     },
     {
       "icon": "🪪",
-      "title": "Surat Pengantar KTP / KK",
+      "title": "Revisi KTP / KK",
       "description": "Pengantar untuk pembuatan KTP dan Kartu Keluarga",
-      "alur": "<ol><li>Ajukan permohonan di kantor desa dengan melampirkan dokumen identitas</li><li>Petugas menerbitkan surat pengantar</li><li>Bawa pengantar ke Dinas Kependudukan untuk proses lanjut</li></ol>",
-      "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
+      "alur": "<ol><li>KTP</li><li>KK</li><li>Berkas pendukung (Buku Nikah, Ijazah, Akta Lahir Dll)</li></ol>",
+      "jam": "Senin - Jumat: 08.00 - 15.00 WIB"
     },
     {
       "icon": "👶",
