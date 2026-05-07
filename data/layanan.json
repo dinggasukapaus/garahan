@@ -22,11 +22,22 @@
       "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
     },
     {
+      "title": "Surat Pengantar Kehilangan",
+      "alur": "<ol><li>KTP</li><li>KK</li><li>Berkas pendukung (Buku Nikah, Ijazah, Akta Lahir Dll)</li></ol>",
+      "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
+    },
+    {
       "icon": "🪪",
       "title": "Revisi KTP / KK",
       "description": "Pengantar untuk perubahan KTP dan Kartu Keluarga",
       "alur": "<ol><li>KTP</li><li>KK</li><li>Berkas pendukung (Buku Nikah, Ijazah, Akta Lahir Dll)</li></ol>",
       "jam": "Senin - Jumat: 08.00 - 15.00 WIB"
+    },
+    {
+      "title": "KTP/KK Hilang",
+      "description": "pencetakan ulang KTP/KK yang hilang",
+      "alur": "<ol><li>Surat Kehilangan dari Kepolisian</li><li>KTP</li><li>KK</li><li>Berkas pendukung (Buku Nikah, Ijazah, Akta Lahir Dll)</li></ol>",
+      "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
     },
     {
       "icon": "👶",
@@ -39,11 +50,6 @@
       "title": "test layanan 1",
       "description": "test deskripsi layana 1",
       "alur": "1.\n2.\n3.\n4.\n",
-      "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
-    },
-    {
-      "title": "Surat Pengantar Kehilangan",
-      "alur": "<ol><li>KTP</li><li>KK</li><li>Berkas pendukung (Buku Nikah, Ijazah, Akta Lahir Dll)</li></ol>",
       "jam": "Senin - Jumat: 08.00 - 14.00 WIB"
     }
   ]
